@@ -1,0 +1,60 @@
+#%RAML 1.0
+title: calculator-Api
+version: v1
+protocols:
+  - HTTP
+
+
+traits:
+  query: !include /traits/trait.raml
+/Addition:
+  get:
+    is:
+      - query
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include /examples/Addition-response .json             
+            
+/Subtraction:
+  post:
+    is:
+      - query
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include /examples/Subtraction-response .json
+          
+/Multiplication:
+  get:
+    is:
+      - query
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include /examples/Multiplication-response .json
+            
+/Division:
+  post:
+     is:
+       - query
+     responses:
+       200:
+        body:
+          application/json:
+            example: !include /examples/Division-response .json
+              
+
+            
+
+         
+
+                                                         
+
+
+        
+      
+                          
